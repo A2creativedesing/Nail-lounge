@@ -1,0 +1,21 @@
+NAIL LOUNGE - codigo completo (sitio de manicurista)
+
+Paleta: Ivory #F7EFE7 · Mocha #6B4E3F · Dusty pink #D9A6A5 · Light beige #E1D2C4
+Tipografias: Cormorant Garamond (titulos), Jost (texto), Great Vibes (acentos en cursiva).
+
+index.html       -> Pagina publica para clientas (va en la raiz del sitio).
+worker.js        -> Backend (Cloudflare Worker "nail-ia"): citas, panel, IA, resenas, galeria, notificaciones, 2FA.
+                    Crea un Worker NUEVO llamado "nail-ia" (no reutilices "barber-ia", asi los datos de la
+                    barberia y del salon de unas quedan separados). Pega worker.js > Deploy.
+                    Necesita: un KV NUEVO (por ejemplo "nail-data") enlazado como "DB", y los secretos
+                    ADMIN_PASSWORD y ANTHROPIC_API_KEY.
+                    Opcionales: AI_DAY_MAX, AI_PHOTO_DAY_MAX, SITE_URL, ORIGINS (dominios extra permitidos).
+                    Si el Worker queda con otra direccion, cambia "nail-ia.ahernandezmania.workers.dev" en
+                    index.html (const API y la linea Content-Security-Policy) y en app/admin.html.
+app/admin.html   -> App de administrador (PWA instalable, "Citas").
+app/admin.webmanifest, app/sw.js, app/icon-*.png -> Archivos de la app de administrador.
+
+Galeria de estilos (panel > Gallery): french, nude, gel-color, chrome, ombre, floral, minimal,
+almond, coffin, pedicure, kids. Sube solo fotos propias o con licencia libre.
+
+Nota: no incluye claves ni contrasenas; esas van solo como secretos en Cloudflare.
