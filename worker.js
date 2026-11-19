@@ -109,7 +109,7 @@ const fillMsg = (tpl, cfg, d, t, loc, link, cl) => String(tpl || '').replace(/\s
 const mask = e => { const [u, d] = String(e || '').split('@'); return d ? u.slice(0, 2) + '•••@' + d : ''; };
 const mailMode = env => (env.GMAIL_WEBHOOK && env.GMAIL_TOKEN) ? 'gmail' : env.RESEND_API_KEY ? 'resend' : 'none';
 const canEmailClients = env => mailMode(env) === 'gmail' || !!(env.RESEND_API_KEY && env.MAIL_FROM && !/resend\.dev/i.test(env.MAIL_FROM));
-const SITE = env => env.SITE_URL || 'https://avisualdesing.github.io/nail-lounge/';
+const SITE = env => env.SITE_URL || 'https://avisualdesing.github.io/Nail-lounge/';
 async function sendMail(env, { to, subject, text, replyTo, fromName }) {
   if (!to) return { ok: false, error: 'No recipient address' };
   const html = '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#6B4E3F">' + esc(text).replace(/\n/g, '<br>') + '</div>';
