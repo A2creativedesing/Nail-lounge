@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ezAoRdI6jG8ATYu8wrUpEoZYxRHwYIUZSRQCeCK+LaY=' 'sha256-c38z1Ok2Vq11oKy781b9THsH68rv8yvolxRhvQ4TGYE=' 'sha256-ci3r6vpKBSzHAEGtqGC1JdMWYYMOTCbmHMhtPYga+Dw='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://nail-ia.ahernandezmania.workers.dev; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ezAoRdI6jG8ATYu8wrUpEoZYxRHwYIUZSRQCeCK+LaY=' 'sha256-NLPl4YHrlkP31JGv3sDFDgpscdowRI3+syzKzLRk9p8=' 'sha256-ci3r6vpKBSzHAEGtqGC1JdMWYYMOTCbmHMhtPYga+Dw='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://nailsia.ahernandezmania.workers.dev; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; manifest-src 'self'">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Citas</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -59,7 +59,7 @@ addEventListener('error',function(e){var l=document.getElementById('login'),a=do
 <main class="wrap" id="list"></main></div>
 <div class="sheet" id="sheet" hidden></div>
 <script>
-const API='https://nail-ia.ahernandezmania.workers.dev',KEY='nls-adm',SITE=new URL('./',location.href).href;
+const API='https://nailsia.ahernandezmania.workers.dev',KEY='nls-adm',SITE=new URL('./',location.href).href;
 const DEF={name:'Nail Lounge',remShortcut:'Agregar cita',confirmMsg:'Hi {client}! Your appointment at {name} on {date} at {time} is confirmed ✓ See you then!',confirmMsgEs:'¡Hola {client}! Tu cita en {name} el {date} a las {time} está confirmada ✓ ¡Te esperamos!',rejectMsg:'Hi {client}! Sorry, {date} at {time} isn’t available at {name}. Please pick another time here: {link}',rejectMsgEs:'¡Hola {client}! Lo sentimos, el {date} a las {time} no está disponible en {name}. Elige otro horario aquí: {link}'};
 const $=s=>document.querySelector(s),LS={get:k=>{try{return localStorage.getItem(k)||''}catch(_){return''}},set:(k,v)=>{try{v?localStorage.setItem(k,v):localStorage.removeItem(k)}catch(_){}}};
 const pad=n=>String(n).padStart(2,'0'),tmin=x=>{const[a,b]=String(x).split(':').map(Number);return a*60+b},fmtT=m=>{const a=Math.floor(m/60)%24;return((a+11)%12+1)+':'+pad(m%60)+' '+(a<12?'AM':'PM')};
