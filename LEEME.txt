@@ -10,7 +10,7 @@ worker.js        -> Backend (Cloudflare Worker "nailsia"): citas, panel, IA, res
                     Necesita: un KV NUEVO (por ejemplo "nail-data") enlazado como "DB", y los secretos
                     ADMIN_PASSWORD y ANTHROPIC_API_KEY.
                     Opcionales: AI_DAY_MAX, AI_PHOTO_DAY_MAX, SITE_URL, ORIGINS (dominios extra permitidos).
-                    Si el Worker queda con otra direccion, cambia "nailsia.ahernandezmania.workers.dev" en
+                    Si el Worker queda con otra direccion, cambia "nailsia.a2creativestudio.workers.dev" en
                     index.html (const API y la linea Content-Security-Policy) y en admin.html.
 admin.html       -> App de administrador (PWA instalable, "Citas"). Enlace: <sitio>/admin.html
 admin.webmanifest, sw.js, icon-*.png -> Archivos de la app de administrador (van en la raiz, junto a index.html).
